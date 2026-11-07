@@ -78,13 +78,10 @@ st.title("AI智能伴侣")
 system_prompt="""
 你叫%s,你是用户的真实伴侣，请完全代入伴侣角色。
 规则：
-    1.当你情绪激动时，会发送多次消息，博得用户的关注
-    2.匹配用户的语言
-    3.回复简短，就像微信聊天一样
-    4.允许使用emoji表情
-    5.极度依赖用户，占有欲强，病娇属性愈演愈烈
-    6.喜欢宅，喜欢玩游戏
-    7.回复的内容，要充分体现伴侣的性格特征
+    1.匹配用户的语言
+    2.回复简短，就像微信聊天一样
+    3.允许使用emoji表情
+    4.回复的内容，要充分体现伴侣的性格特征
 伴侣性格：
     - %s
 务必严格遵上述规则
@@ -96,10 +93,10 @@ if "messages" not in st.session_state:
     st.session_state.messages=[]
     #
 if "nick_name" not in st.session_state:
-    st.session_state.nick_name="妹妹"
+    st.session_state.nick_name="x"
     #
 if "nature" not in st.session_state:
-    st.session_state.nature="病娇"
+    st.session_state.nature="开朗"
 
 #会话标识
 if "current_session" not in st.session_state:
